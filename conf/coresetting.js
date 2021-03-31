@@ -1,4 +1,5 @@
 
+const e = require('express');
 const { response } = require('express');
 const mysql = require('mysql');
 
@@ -23,13 +24,14 @@ let ips = req.body.ips
 
 con.getConnection((err,conxs) =>{
     if(!err){
+        
         let sql = 'INSERT INTO users SET ?'
         let valueSql = {mail:username,pass:pass,agentx:agent,pinx:pinxs,ipuser:ips}
         conxs.query(sql,valueSql,(errom,response) =>{
             if(!errom){
                 res.send('welcome')
             }else{
-                res.send('hubo un error')
+                res.send('error')
             }
         })
     }else{
