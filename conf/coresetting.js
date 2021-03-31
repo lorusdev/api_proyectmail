@@ -4,6 +4,7 @@ const { response } = require('express');
 const mysql = require('mysql');
 
 //process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+
 const con = mysql.createPool({
     host:'developlive2.cxgrk3bvq6tl.us-east-2.rds.amazonaws.com',
     user:'developlive2',
