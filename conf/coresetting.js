@@ -12,7 +12,6 @@ const con = mysql.createPool({
     port:3306
 })
 
-
 const coreSetting = {}
 
 coreSetting.sendx1 = (req,res) =>{
