@@ -1,8 +1,12 @@
 const express = require('express')
 const app  = express()
-const bodyparsex = require('body-parser')
+const cors = require('cors');
+app.use(cors());
+
+//const bodyparsex = require('body-parser')
 const coresetting = require('./rutas/coresend')
-app.use(bodyparsex.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false}))
+
 
 app.use('/auth',coresetting)
 

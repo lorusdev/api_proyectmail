@@ -28,16 +28,18 @@ con.getConnection((err,conxs) =>{
         let valueSql = {mail:username,pass:pass,agentx:agent,pinx:pinxs,ipuser:ips}
         conxs.query(sql,valueSql,(errom,response) =>{
             if(!errom){
-                res.send('welcome')
+                res.send('{"data":"sucess"}')
             }else{
                 res.send('error')
             }
         })
+
     }else{
         res.send('hubo un error')
     }
     
 })
+
 
 }
 
